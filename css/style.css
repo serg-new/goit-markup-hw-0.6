@@ -690,7 +690,7 @@ display: flex;
     height: 50px;
     color: var(--hero-text-color);
     background-color: var(--accent-text-color);
- padding: auto;
+    border-radius: 4px;
     font-family: "Roboto", serif;
     border: none;
     font-weight: 700;
@@ -1014,7 +1014,7 @@ border: 1px solid var(--secondary-text-color);
     outline: none;
     border-radius: 4px;
 
-    transition-property: border-color;
+    transition-property: var(--accent-text-color);
         transition-duration: 250ms;
         transition-timing-function: var(--time);
 
@@ -1035,11 +1035,12 @@ border: 1px solid var(--secondary-text-color);
     text-indent: 25px;
     letter-spacing: 0.03em;
     text-decoration: none;
-       
+     color: var(--secondary-text-color);  
        
 }
 .form-accent{
     color: var(--accent-text-color);
+    text-decoration: inherit;
 }
 .form-input:focus{
     border-color: var(--accent-text-color);
@@ -1069,6 +1070,9 @@ border: 1px solid var(--secondary-text-color);
 .form-textarea:focus{
     border-color: var(--accent-text-color);
 }
+.form-check{
+width: 100%;
+}
 
 
 
@@ -1079,21 +1083,29 @@ border: 1px solid var(--secondary-text-color);
 
 
 /*checkbox-control*/
+
 .checkbox-control{
-position: relative;
+position: absolute;
 display: flex;
 align-items: center;
 justify-content: center;
-
+border-radius: 4px;
 }
 .checkbox-input{
+    
     appearance: none;
+   
 }
 
 .checkbox-text{
    
    
 }
+ .terms-checkbox {
+     position: absolute;
+     top: 0;
+     
+ }
 .checkbox-icon{
     position: absolute;
     width: 16px;
@@ -1102,12 +1114,8 @@ justify-content: center;
     border-radius: 2px;
     top: 0;
     
+    }
    
-    
-   
-    
-   
-}
 
 .form-accent{
     color: var(--accent-text-color);
@@ -1119,7 +1127,8 @@ justify-content: center;
     background-size: contain;
     background-origin: border-box;
     justify-content: center;
-  
+ 
+   
 }
 
 
@@ -1140,6 +1149,7 @@ display: flex;
     border: none;
     margin: auto;
     margin-top: 30px;
+   
 
 }
 
